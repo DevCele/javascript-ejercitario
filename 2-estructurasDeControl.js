@@ -138,11 +138,13 @@ console.log(esVocal("i"))
 function evaluarNumeros(a, b, c) {
     if (a > 0 && b > 0 && c > 0) {
         return "Todos son positivos";
-    } else if (a < 0 || b < 0 || c < 0) {
+    } else if (a < 0 && b < 0 && c < 0) {
         return "Al menos uno es negativo";
     } else if (a < 0 && b < 0 && c < 0) {
         return "Todos son negativos";
-    } else {
+    } else if (a < 0 || b < 0 || c === 0 ){
+        return "Al menos uno es negativo o hay un cero"
+    }else {
         return "Hay una combinación de positivos y cero";
     }
 }

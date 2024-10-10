@@ -8,9 +8,11 @@
     despedir ()
 // 1.2 Crea una función llamada `multiplicarPorDos` que tome un número como parámetro y devuelva el doble de ese número.
     function multiplicarPorDos (numero){
-        return (numero )
+        return numero * 2
     }
-    console.log (multiplicarPorDos (9)) //Resultado 18
+    console.log (multiplicarPorDos (9)) // Resultado 18
+    console.log (multiplicarPorDos (5)) // Resultado 10
+    console.log (multiplicarPorDos (3)) // Resultado 6
 
 // 1.3 Crea una función llamada `esMayorDeEdad` que tome un número como parámetro y devuelva `true` si es mayor de 18, o `false` en caso contrario.
     function esMayorDeEdad(numero){

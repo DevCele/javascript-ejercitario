@@ -47,7 +47,12 @@ console.log(palabrasTerminanConA(palabras)) // -> true
 // 4.1 Crea una función llamada `buscaPalabras` que reciba dos parámetros: un array `words` y una palabra `word`.
 // Busca el índice de la palabra en el array y devuelve todas las palabras después de ese índice en un nuevo array
 function buscaPalabras(words, word) {
-    // Tu código aquí
+    const index = words.indexOf(word); 
+    if (index !== -1) {
+        return words.slice(index + 1); 
+    } else {
+        return []; 
+    }
 }
 
 const words = ['hola', 'mundo', 'javascript', 'node'];
@@ -61,11 +66,11 @@ function findJavaScript(matrix) {
         for(j = 0; j < matrix[i].length; j++){
            
             if(matrix[i][j] === "JavaScript"){
-                return `JavaScript encontrado en la posición: [${i}, ${j}]`
+                return [i, j];
             }
         }
     }
-    return "JavaScript no encontrado"
+    return [-1, -1];
 }
 
 const matrix = [
